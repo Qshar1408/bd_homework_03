@@ -12,7 +12,7 @@
 select district as Районы from address
 where district like 'K%a' and district not like '% %';
 ```
-
+ ![bd_003](https://github.com/Qshar1408/bd_homework_03/blob/main/img/bd_03_001.png)
 
 ### Задание 2
 
