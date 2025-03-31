@@ -18,6 +18,13 @@ where district like 'K%a' and district not like '% %';
 
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года **включительно** и стоимость которых превышает 10.00.
 
+```bash
+select * from payment
+where date(payment_date) >= '2005-06-15' and date(payment_date) <= '2005-06-18' and amount > 10.00
+order by payment_date asc;
+```
+ ![bd_003](https://github.com/Qshar1408/bd_homework_03/blob/main/img/bd_03_002.png)
+
 ### Задание 3
 
 Получите последние пять аренд фильмов.
