@@ -59,6 +59,13 @@ WHERE active = 1 AND first_name IN ('Kelly', 'Willie');
 
 Выведите Email каждого покупателя, разделив значение Email на две отдельных колонки: в первой колонке должно быть значение, указанное до @, во второй — значение, указанное после @.
 
+```bash
+SELECT lower(email) AS Почтовый_адрес, lower(substring_index(email, '@', 1)) as Почтовый_адрес_до_@, right(email, length(email)-position('@' in email)) as Почтовый_адрес_после_@
+from customer 
+order by email asc;
+```
+![bd_003](https://github.com/Qshar1408/bd_homework_03/blob/main/img/bd_03_005.png)
+
 ### Задание 6*
 
 Доработайте запрос из предыдущего задания, скорректируйте значения в новых колонках: первая буква должна быть заглавной, остальные — строчными.
