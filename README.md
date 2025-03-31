@@ -60,7 +60,7 @@ WHERE active = 1 AND first_name IN ('Kelly', 'Willie');
 Выведите Email каждого покупателя, разделив значение Email на две отдельных колонки: в первой колонке должно быть значение, указанное до @, во второй — значение, указанное после @.
 
 ```bash
-SELECT lower(email) AS Почтовый_адрес, lower(substring_index(email, '@', 1)) as Почтовый_адрес_до_@, right(email, length(email)-position('@' in email)) as Почтовый_адрес_после_@
+SELECT lower(email) AS Почтовый_адрес, lower(substring_index(email, '@', 1)) as Почтовый_адрес_до, right(email, length(email)-position('@' in email)) as Почтовый_адрес_после
 from customer 
 order by email asc;
 ```
