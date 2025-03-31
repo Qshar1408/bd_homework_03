@@ -29,6 +29,13 @@ order by payment_date asc;
 
 Получите последние пять аренд фильмов.
 
+```bash
+SELECT rental_date
+FROM rental
+ORDER BY rental_date DESC
+LIMIT 5;
+```
+ ![bd_003](https://github.com/Qshar1408/bd_homework_03/blob/main/img/bd_03_003.png)
 ### Задание 4
 
 Одним запросом получите активных покупателей, имена которых Kelly или Willie. 
